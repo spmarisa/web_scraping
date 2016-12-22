@@ -21,7 +21,7 @@ test: &test
 production:
   <<: *default
   database: web_scraping_production
-  password: 13KyaHogaKaliya
+  password: apple123$
 
 cucumber:
   <<: *test
