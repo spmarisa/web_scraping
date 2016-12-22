@@ -1,0 +1,27 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 40
+  username: "root"
+  # host: "192.168.1.26"
+  # port: "3306"
+  host: "127.0.0.1"
+  reconnect: true
+
+development:
+  <<: *default
+  database: web_scraping_development
+  password: apple123$
+
+test: &test
+  <<: *default
+  database: web_scraping_test
+  password: apple123$
+
+production:
+  <<: *default
+  database: web_scraping_production
+  password: 13KyaHogaKaliya
+
+cucumber:
+  <<: *test
